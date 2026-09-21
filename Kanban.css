@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html ,body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: var(--main-bg);
+    overflow: hidden;
+    gap: 10px;
+}
+
+.wrapper{
+    position: relative;
+}
+
+:root{
+    --main-bg: #333;
+    --border-color: #FFFAFA;
+    --text-color: #F2F3F4;
+    --card-color: #222;
+
+    --font-size-sm: 0.875rem;  
+    --font-size-base: 1rem;    
+    --font-size-md: 1.25rem;   
+    --font-size-lg: 1.5rem;    
+    --font-size-xl: 2rem;      
+    --font-size-2xl: 2.5rem;   
+
+    --space-xs: 0.25rem;  
+    --space-sm: 0.5rem;   
+    --space-md: 1rem;     
+    --space-lg: 1.5rem;   
+    --space-xl: 2rem;     
+    --space-2xl: 3rem; 
+}
+
+
+.upper-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.2rem;
+}
+
+.Add{
+    border: 1.8px solid var(--border-color);
+    padding: 5px;
+    border-radius: 8px;
+    background-color: rgb(250, 109, 109);
+    color: var(--text-color);
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-lg);
+    margin-left: var(--space-2xl);
+}
+
+.todo , .Inprogress , .done {
+  height: 85vh;
+  width: 30%;
+  border: 2px solid var(--border-color);
+  border-radius: 15px;
+}
+
+.card-todo{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+p{
+    color: var(--text-color);   
+}
+
+.card{
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid #111;
+    width: 90%;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 17%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--card-color);
+    cursor: grabbing;
+}
+
+.head{
+    color: var(--text-color);
+    margin: 8px;
+    font-size: var(--font-size-md);
+}
+
+.Des{
+    color: var(--text-color);
+    margin: 5px;
+    font-size: 15px;
+}
+
+.Delete{
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    width: 50px;
+    border: 1px solid var(--border-color);
+    background-color: rgb(250, 109, 109);
+    border-radius: 5px;
+    height: 30px;
+    margin-left: 6rem;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.card-progress{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.card-done{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.Delete:hover{
+    color: var(--main-bg);
+    scale: 1.1;
+}
+
+.hover{
+    scale: 1.05;
+    border: 1.8px dashed var(--border-color);
+} 
+
+.Add:hover{
+    color: #222;
+    scale: 1.1;
+}
+
+.form{
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    border: 1.4px solid #111;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #111;
+    background-color: #111;
+}
+
+.move{
+    display: fl;
+}
+
+.start {
+    text-align: center;
+    font-family: monospace;
+    font-size: var(--font-size-lg);
+    color: var(--border-color);
+}
+
+label{
+    color: var(--border-color);
+    margin: 10px;
+}
+
+input{
+    width: 200px;
+    margin: 10px;
+    border-radius: 5px;
+    height: 30px;
+    font-size: var(--font-size-base);    
+}
+
+::placeholder{
+    text-align: center;
+    color: #111;
+    font-weight: bold;
+    font-size: var(--font-size-base);
+}
+
+.submit{
+    margin: 10px;
+    margin-left: 40%;
+    padding: var(--space-xs);
+    background-color: rgb(243, 61, 61);
+    color: var(--border-color);
+    border-radius: 5px;
+}
+
+.submit:hover{
+    color: #111;
+}
